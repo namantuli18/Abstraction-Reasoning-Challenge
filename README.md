@@ -4,10 +4,6 @@
 
 This repository contains a modified version of the winning baseline from the 2024 ARC Prize. It implements a fine-tuning pipeline for the Mistral-NeMo-Minitron 8B model (utilizing `unsloth` for 4-bit quantization) to solve Abstract Reasoning Corpus (ARC) tasks.
 
-## Modifications in this Fork
-
-This version introduces specific optimizations to the original baseline:
-
 * **Active Layer Control**: Added a `num_active_layers` variable to `common_stuff.py`. This allows for precise control over the training process by training only the initial $N$ layers of the model while keeping the remaining layers frozen.
 * **Hyperparameter Tuning**: Adjusted LoRA (Low-Rank Adaptation) and general training settings to maximize performance within a strict 12-hour runtime limit.
 
