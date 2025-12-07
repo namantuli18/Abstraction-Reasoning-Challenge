@@ -1,4 +1,4 @@
-# ARC-AGI Baseline Fork (LB 5.83)
+# ARC-AGI Baseline
 
 ## Overview
 
