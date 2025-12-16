@@ -1,0 +1,18 @@
+#Just copy and past non commented lines
+# This is what I did for the setup
+module load anaconda3
+
+# create env in your project directory
+conda create -p /ocean/projects/cis250063p/jbentley/llm_sft python=3.10 -y
+
+# activate it
+conda activate /ocean/projects/cis250063p/jbentley/llm_sft
+
+# (optional) add envs_dirs so it shows up in `conda env list`
+conda config --add envs_dirs /ocean/projects/cis250063p/jbentley
+
+# install packages
+pip install torch==2.3.1 --extra-index-url https://download.pytorch.org/whl/cu121
+pip install transformers accelerate datasets peft trl
+pip install unsloth
+pip install wandb

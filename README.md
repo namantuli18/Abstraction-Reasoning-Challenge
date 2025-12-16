@@ -21,6 +21,23 @@ The notebook generates a core utility script, `model_runner.py`, which handles t
 * Wraps the `SFTTrainer` (or `UnslothTrainer`) to manage the training loop.
 * Handles dataset formatting, gradient accumulation, and adapter saving.
 
+## Training Pipeline (`train/` folder)
+
+The `train/` directory contains the complete training infrastructure with multiple versions and experimental scripts:
+
+### Structure
+
+* **`main/code/arc-trainer/`**: Core training scripts including multiple iterations (v1-v10) of the training pipeline, with versions exploring different models (Mistral, Qwen), staged training approaches, and various optimization strategies.
+* **`misc/`**: Experimental scripts, notebooks, and alternative implementations for model loading, data processing, and fine-tuning experiments.
+* **`setup/`**: Configuration and setup files for the training environment.
+* **`shared/`**: Shared resources, utilities, and cached data used across different training versions.
+
+### Key Components
+
+* **`arc_loader.py`**: Custom data loader for ARC tasks.
+* **`model_tools.py`**: Utility functions for model preparation and manipulation.
+* **Training versions**: Multiple training script iterations (v1-v10) representing progressive improvements and experiments with different approaches, including staged training and multi-model comparisons.
+
 ### 3. Inference (`Decoder` class)
 * **Test-Time Augmentation (TTA)**: The `Decoder` class handles predictions including transpositions and rotations of the input grids.
 * **Scoring**: Utilities to validate predictions against known outputs.
